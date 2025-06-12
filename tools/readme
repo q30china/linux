@@ -8,6 +8,12 @@ curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64
 
 docker build -t qgisweb:1.0.0 .
 
+1.生成公钥
+ssh-keygen -t ed25519 -C "q30china@gmail.com"
+2.将公钥~/.ssh/id_ed25519.pub内容添加到GitHub账户的SSH Keys设置中
+3. 使用SSH URL重新克隆
+git clone git@github.com:q30china/linux.git
+
 ### swap memory
 
 1.确保无残留占用
@@ -21,6 +27,7 @@ sudo swapon /home/user/swapfile
 
 ### github related
 
+0. 使用SSH URL克隆
 git clone git@github.com:q30china/linux.git
 
 1. 进入仓库目录
@@ -34,3 +41,6 @@ git commit -m "Add first script killsome to directory bat"
 
 4. 推送到远程main分支（首次）
 git push -u origin main
+
+5. 更改推送之前
+git pull
