@@ -1,0 +1,22 @@
+#!/bin/bash
+MARKER_FILE="/tmp/my_script_marker"
+if [ ! -f "$MARKER_FILE" ]; then
+    touch "$MARKER_FILE"
+    sudo apt update
+    sudo apt upgrade -y
+    #sudo apt install -y remmina
+    #sudo apt install -y netcat-traditional
+    sudo apt install -y falkon
+    sudo systemctl unmask containerd
+    sudo systemctl unmask docker.socket
+    sudo systemctl unmask docker.service
+    sudo cp daemon.json /etc/docker/
+    sudo systemctl daemon-reload
+    sudo systemctl stop docker.socket
+    sudo systemctl stop docker
+    sudo systemctl start docker
+    sudo docker info
+    sudo mkswap /home/user/swapfile
+    sudo swapon /home/user/swapfile
+    echo "脚本首次执行完成"
+fi

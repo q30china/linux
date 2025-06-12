@@ -1,0 +1,36 @@
+### download link
+
+https://github.com/fatedier/frp/releases/download/v0.62.1/frp_0.62.1_linux_amd64.tar.gz
+
+https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+
+https://github.com/q30china/draw
+
+curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
+
+### linux command
+docker build -t qgisweb:1.0.0 .
+
+### swap memory
+sudo swapoff /home/user/swapfile 2>/dev/null  # 确保无残留占用
+sudo rm -f /home/user/swapfile 
+# 示例：在独立分区 /home/user 创建Swap
+sudo dd if=/dev/zero of=/home/user/swapfile bs=1G count=4
+sudo chmod 600 /home/user/swapfile
+sudo mkswap /home/user/swapfile
+sudo swapon /home/user/swapfile
+
+### github related
+git clone git@github.com:q30china/linux.git
+
+# 进入仓库目录
+cd your-repo-name
+
+# 添加所有更改
+git add .
+
+# 提交到本地
+git commit -m "Add first script killsome to directory bat"
+
+# 推送到远程main分支（首次）
+git push -u origin main
