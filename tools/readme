@@ -53,4 +53,9 @@ docker rm ""
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:latest
 
 curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
+cd /home/user/tools/ollama
+gunzip ollama-linux-amd64.tgz
+tar xvf ollama-linux-amd64.tar
+ollama serve
 
+###
