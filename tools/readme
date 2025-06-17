@@ -58,4 +58,33 @@ gunzip ollama-linux-amd64.tgz
 tar xvf ollama-linux-amd64.tar
 ollama serve
 
-###
+### update snipe-it
+
+cd /home/user/git/snipe-it
+git pull
+vi .env
+```
+# --------------------------------------------
+# REQUIRED: DOCKER SPECIFIC SETTINGS
+# --------------------------------------------
+APP_VERSION=
+APP_PORT=60001
+
+# --------------------------------------------
+# REQUIRED: BASIC APP SETTINGS
+# --------------------------------------------
+APP_ENV=production
+APP_DEBUG=false
+# Please regenerate the APP_KEY value by calling `docker compose run --rm app php artisan key:generate --show`. Copy paste the value here
+APP_KEY= base64:g2WHulLyIcNUk8lONwmLWF/eEiu+vXz38LP62KnfyRM=
+APP_URL=http://www.ginhai.com:60001
+# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones - TZ identifier
+APP_TIMEZONE='UTC'
+APP_LOCALE=en-US
+MAX_RESULTS=500
+```
+docker compose up
+docker compose down
+
+###  new item
+###  new item
