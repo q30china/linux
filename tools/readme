@@ -86,5 +86,9 @@ MAX_RESULTS=500
 docker compose up
 docker compose down
 
-###  new item
+### python virtual enviroment 
+source .venv/bin/activate
+# 执行以下命令，检查Python路径是否指向.venv
+python -c "import sys; print(sys.executable)"
+
 ###  new item
