@@ -91,4 +91,8 @@ source .venv/bin/activate
 # 执行以下命令，检查Python路径是否指向.venv
 python -c "import sys; print(sys.executable)"
 
+### dufs implement at ubuntu
+#https://github.com/sigoden/dufs/releases/
+tar -xzf  dufs-v0.40.0-x86_64-linux.tar.gz
+./dufs --port 5000 --allow-upload /home/user/tools/share
 ###  new item
