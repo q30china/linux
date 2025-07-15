@@ -95,4 +95,15 @@ python -c "import sys; print(sys.executable)"
 #https://github.com/sigoden/dufs/releases/
 tar -xzf  dufs-v0.40.0-x86_64-linux.tar.gz
 ./dufs --port 5000 --allow-upload /home/user/tools/share
-###  new item
+
+### 证书申请
+
+systemctl stop nginx
+sudo systemctl stop trojan.service
+sudo apt-get install certbot python3-certbot-nginx
+sudo certbot --nginx -d www.ginhai.com
+vi /etc/trojan/conf/server.json
+    "cert": "/etc/letsencrypt/live/www.ginhai.com/fullchain.pem",
+    "key": "/etc/letsencrypt/live/www.ginhai.com/privkey.pem", 
+
+sudo systemctl start trojan.service
