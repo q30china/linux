@@ -5,3 +5,5 @@ cscript ospp.vbs /dstatus
 cscript ospp.vbs /inpkey:XJ2XN-FW8RK-P4HMP-DKDBV-GCVGB 
 cscript ospp.vbs /sethst:kms.03k.org
 cscript ospp.vbs /act
+
+### 
