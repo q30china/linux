@@ -1,20 +1,24 @@
+# Linux
+
+## 一. Google Cloud server
+
 ### 1.download link
 
-https://github.com/fatedier/frp/releases/download/v0.62.1/frp_0.62.1_linux_amd64.tar.gz
-https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
-curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
+<https://github.com/fatedier/frp/releases/download/v0.62.1/frp_0.62.1_linux_amd64.tar.gz>
+<https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh>
+curl -L <https://ollama.com/download/ollama-linux-amd64.tgz> -o ollama-linux-amd64.tgz
 
 ---------------
 
-### 2.linux command
+## 二. Linux command
 
 docker build -t qgisweb:1.0.0 .
 
 1.生成公钥
-ssh-keygen -t ed25519 -C "q30china@gmail.com"
+ssh-keygen -t ed25519 -C "<q30china@gmail.com>"
 2.将公钥~/.ssh/id_ed25519.pub内容添加到GitHub账户的SSH Keys设置中
 3. 使用SSH URL重新克隆
-git clone git@github.com:q30china/linux.git
+git clone <git@github.com>:q30china/linux.git
 
 ---------------
 
@@ -22,7 +26,7 @@ git clone git@github.com:q30china/linux.git
 
 1.确保无残留占用
 sudo swapoff /home/user/swapfile 2>/dev/null
-sudo rm -f /home/user/swapfile 
+sudo rm -f /home/user/swapfile
 2.在独立分区 /home/user 创建Swap
 sudo dd if=/dev/zero of=/home/user/swapfile bs=1G count=4
 sudo chmod 600 /home/user/swapfile
@@ -32,7 +36,7 @@ sudo swapon /home/user/swapfile
 ### 4.github related
 
 0. 使用SSH URL克隆
-git clone git@github.com:q30china/linux.git
+git clone <git@github.com>:q30china/linux.git
 
 1. 进入仓库目录
 cd your-repo-name
@@ -56,7 +60,7 @@ docker pull ghcr.io/open-webui/open-webui:latest
 docker rm ""
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:latest
 
-curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
+curl -L <https://ollama.com/download/ollama-linux-amd64.tgz> -o ollama-linux-amd64.tgz
 cd /home/user/tools/ollama
 gunzip ollama-linux-amd64.tgz
 tar xvf ollama-linux-amd64.tar
@@ -67,6 +71,7 @@ ollama serve
 cd /home/user/git/snipe-it
 git pull
 vi .env
+
 ```
 # --------------------------------------------
 # REQUIRED: DOCKER SPECIFIC SETTINGS
@@ -87,16 +92,21 @@ APP_TIMEZONE='UTC'
 APP_LOCALE=en-US
 MAX_RESULTS=500
 ```
+
 docker compose up
 docker compose down
 
-### 7.python virtual enviroment 
+### 7.python virtual enviroment
+
 source .venv/bin/activate
+
 # 执行以下命令，检查Python路径是否指向.venv
+
 python -c "import sys; print(sys.executable)"
 
 ### 8.dufs implement at ubuntu
-#https://github.com/sigoden/dufs/releases/
+
+# <https://github.com/sigoden/dufs/releases/>
 tar -xzf  dufs-v0.40.0-x86_64-linux.tar.gz
 ./dufs --port 5000 --allow-upload /home/user/tools/share
 
@@ -106,11 +116,11 @@ systemctl stop nginx
 sudo systemctl stop trojan.service
 
 sudo apt-get install certbot python3-certbot-nginx
-sudo certbot --nginx -d www.ginhai.com
+sudo certbot --nginx -d <www.ginhai.com>
 
 vi /etc/trojan/conf/server.json
     "cert": "/etc/letsencrypt/live/www.ginhai.com/fullchain.pem",
-    "key": "/etc/letsencrypt/live/www.ginhai.com/privkey.pem", 
+    "key": "/etc/letsencrypt/live/www.ginhai.com/privkey.pem",
 
 sudo systemctl start trojan.service
 sudo systemctl status trojan.service
@@ -125,8 +135,8 @@ sudo systemctl status trojan.service
 
 - sysctl -p
 
-### 12.
+### 12
 
-### 13.
+### 13
 
-### 14.
+### 14
