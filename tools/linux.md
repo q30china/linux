@@ -3,7 +3,7 @@
 https://github.com/fatedier/frp/releases/download/v0.62.1/frp_0.62.1_linux_amd64.tar.gz
 https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
 curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
------
+----------
 ### 2.linux command
 
 docker build -t qgisweb:1.0.0 .
@@ -13,7 +13,7 @@ ssh-keygen -t ed25519 -C "q30china@gmail.com"
 2.将公钥~/.ssh/id_ed25519.pub内容添加到GitHub账户的SSH Keys设置中
 3. 使用SSH URL重新克隆
 git clone git@github.com:q30china/linux.git
------
+----------
 ### 3.swap memory
 
 1.确保无残留占用
