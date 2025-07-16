@@ -96,7 +96,7 @@ python -c "import sys; print(sys.executable)"
 tar -xzf  dufs-v0.40.0-x86_64-linux.tar.gz
 ./dufs --port 5000 --allow-upload /home/user/tools/share
 
-### Trojan 针对域名的3个月证书过期问题，证书申请（后台应该会自动申请，记录下时间2025.10.15看是否过期）
+## Trojan 针对域名的3个月证书过期问题，证书申请（后台应该会自动申请，记录下时间2025.10.15看是否过期）
 
 systemctl stop nginx
 sudo systemctl stop trojan.service
@@ -111,7 +111,7 @@ vi /etc/trojan/conf/server.json
 sudo systemctl start trojan.service
 sudo systemctl status trojan.service
 
-### Wireguard相关，重启及其后，可能ipv4的转发没有自动打开，不知什么原因。以后如果有接受和放松，记得看服务器上ipv4转发
+## Wireguard相关，重启及其后，可能ipv4的转发没有自动打开，不知什么原因。以后如果有接受和放松，记得看服务器上ipv4转发
 
 - /etc/wireguard/wg0.conf, 服务器中的MTU设置1400 > 客户端MTU 1300，warning错误不会再报，原来双方都设置1350
 
