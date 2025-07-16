@@ -1,10 +1,10 @@
-### download link
+### 1.download link
 
 https://github.com/fatedier/frp/releases/download/v0.62.1/frp_0.62.1_linux_amd64.tar.gz
 https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
 curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
 
-### linux command
+### 2.linux command
 
 docker build -t qgisweb:1.0.0 .
 
@@ -14,7 +14,7 @@ ssh-keygen -t ed25519 -C "q30china@gmail.com"
 3. 使用SSH URL重新克隆
 git clone git@github.com:q30china/linux.git
 
-### swap memory
+### 3.swap memory
 
 1.确保无残留占用
 sudo swapoff /home/user/swapfile 2>/dev/null
@@ -25,7 +25,7 @@ sudo chmod 600 /home/user/swapfile
 sudo mkswap /home/user/swapfile
 sudo swapon /home/user/swapfile
 
-### github related
+### 4.github related
 
 0. 使用SSH URL克隆
 git clone git@github.com:q30china/linux.git
@@ -45,7 +45,7 @@ git push -u origin main
 5. 更改推送之前
 git pull
 
-### update ollama and openwebui
+### 5.update ollama and openwebui
 
 docker stop ""
 docker pull ghcr.io/open-webui/open-webui:latest
@@ -58,7 +58,7 @@ gunzip ollama-linux-amd64.tgz
 tar xvf ollama-linux-amd64.tar
 ollama serve
 
-### update snipe-it
+### 6.update snipe-it
 
 cd /home/user/git/snipe-it
 git pull
@@ -86,17 +86,17 @@ MAX_RESULTS=500
 docker compose up
 docker compose down
 
-### python virtual enviroment 
+### 7.python virtual enviroment 
 source .venv/bin/activate
 # 执行以下命令，检查Python路径是否指向.venv
 python -c "import sys; print(sys.executable)"
 
-### dufs implement at ubuntu
+### 8.dufs implement at ubuntu
 #https://github.com/sigoden/dufs/releases/
 tar -xzf  dufs-v0.40.0-x86_64-linux.tar.gz
 ./dufs --port 5000 --allow-upload /home/user/tools/share
 
-## Trojan 针对域名的3个月证书过期问题，证书申请（后台应该会自动申请，记录下时间2025.10.15看是否过期）
+### 9.Trojan 针对域名的3个月证书过期问题，证书申请（后台应该会自动申请，记录下时间2025.10.15看是否过期）
 
 systemctl stop nginx
 sudo systemctl stop trojan.service
@@ -111,7 +111,7 @@ vi /etc/trojan/conf/server.json
 sudo systemctl start trojan.service
 sudo systemctl status trojan.service
 
-## Wireguard相关，重启及其后，可能ipv4的转发没有自动打开，不知什么原因。以后如果有接受和放松，记得看服务器上ipv4转发
+### 10.Wireguard相关，重启及其后，可能ipv4的转发没有自动打开，不知什么原因。以后如果有接受和放松，记得看服务器上ipv4转发
 
 - /etc/wireguard/wg0.conf, 服务器中的MTU设置1400 > 客户端MTU 1300，warning错误不会再报，原来双方都设置1350
 
@@ -121,4 +121,8 @@ sudo systemctl status trojan.service
 
 - sysctl -p
 
-### 
+### 12.
+
+### 13.
+
+### 14.
