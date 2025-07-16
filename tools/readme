@@ -111,4 +111,14 @@ vi /etc/trojan/conf/server.json
 sudo systemctl start trojan.service
 sudo systemctl status trojan.service
 
+### Wireguard相关，重启及其后，可能ipv4的转发没有自动打开，不知什么原因。以后如果有接受和放松，记得看服务器上ipv4转发
+
+- /etc/wireguard/wg0.conf, 服务器中的MTU设置1400 > 客户端MTU 1300，warning错误不会再报，原来双方都设置1350
+
+- /etc/sysctl.conf, net.ipv4.ip_forward = 1
+
+- sysctl net.ipv4.ip_forward
+
+- sysctl -p
+
 ### 
