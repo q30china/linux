@@ -30,6 +30,7 @@ Profile -> Text -> Font = “Hack Nerd Font”
 brew search nerd-font
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+brew install --cask font-fira-code-nerd-font
 ```
 
 *你可以将 font-hack-nerd-font 替换为其他你喜欢的 Nerd Fonts 变种，
