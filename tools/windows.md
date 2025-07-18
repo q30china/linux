@@ -12,4 +12,12 @@ cscript ospp.vbs /sethst:kms.03k.org
 cscript ospp.vbs /act
 ```
 
-### 2
+### 2. Windows下部分dos命令
+
+- **查看端口占用进程**:
+
+```bash
+netstat -ano | findstr "1080" | findstr "CLOSE_WAIT"
+```
+
+- xxx
