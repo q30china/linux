@@ -42,4 +42,11 @@ brew install ripgrep
 brew install fd
 ```
 
-### 3. 安装lazyvim
+## python虚拟环境
+
+创建虚拟环境
+/Users/qyx/my/hxmap_copel/.venv/bin/python -m venv .venv
+
+安装必须的python包
+pip install -r requirements
+
